@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>test_benchmark.Benchmarks.EmailValidatorsBenchmark-20230519-212142</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=macOS Ventura 13.3.1 (a) (22E772610a) [Darwin 22.4.0]
+Intel Core i5-8279U CPU 2.40GHz (Coffee Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.203
+  [Host]     : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th> Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>Gen0</th><th>Gen1</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>Regex</td><td>797.857 &mu;s</td><td>2.4777 &mu;s</td><td>2.0690 &mu;s</td><td>1.000</td><td>211.9141</td><td>0.9766</td><td>650.78 KB</td><td>1.000</td>
+</tr><tr><td>RegexCompiled</td><td>38.667 &mu;s</td><td>0.4017 &mu;s</td><td>0.3757 &mu;s</td><td>0.048</td><td>15.2588</td><td>0.0610</td><td>46.88 KB</td><td>0.072</td>
+</tr><tr><td>Simple</td><td>5.201 &mu;s</td><td>0.0133 &mu;s</td><td>0.0118 &mu;s</td><td>0.007</td><td>1.7929</td><td>0.0076</td><td>5.49 KB</td><td>0.008</td>
+</tr></tbody></table>
+</body>
+</html>
